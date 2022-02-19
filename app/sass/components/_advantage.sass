@@ -1,0 +1,118 @@
+@import "vars"
+
+.advantage
+	padding: 0 15px
+	margin-bottom: 15px
+	&-all
+		background: #E2DDDB
+		padding: 110px 60px 62px
+	&-row
+		display: flex
+		flex-flow: row wrap
+		justify-content: space-between
+		margin: 0 -8px
+	&-col
+		width: 50%
+		padding: 0 8px 86px
+	&-wrap
+		max-width: 460px
+		padding-left: 70px
+		position: relative
+		p
+			font-size: 14px
+			max-width: 360px
+			font-family: $Montserrat
+			padding-bottom: 0
+			margin-bottom: 0
+	&-ico
+		position: absolute
+		top: 0
+		left: 0
+		img,svg
+			display: block
+	&-name
+		display: block
+		font-family: $Montserrat
+		font-size: 20px
+		line-height: 1.5
+		font-weight: normal
+		color: $colorMain
+		margin: 0 0 10px
+		a
+			color: $colorMain
+	&.advantage-second
+		.advantage
+			&-row
+				justify-content: flex-start
+				padding-bottom: 10px
+			&-col
+				width: 33.333%
+				padding-bottom: 41px
+			&-ico
+				top: 50%
+				transform: translate(0,-50%)
+			&-name
+				margin: 0
+			&-bl
+				max-width: 1051px
+			&-wrap
+				padding-left: 60px
+	
+@media only screen and (max-width : 1040px)
+	.advantage
+		&-all
+			padding: 60px 60px 25px
+		&-col
+			padding-bottom: 45px
+		&-wrap
+			padding-left: 60px
+		&-name
+			font-size: 18px
+			line-height: 25px
+			margin-bottom: 14px
+		&.advantage-second
+			.advantage
+				&-row
+					padding-bottom: 8px
+				&-col
+					width: 50%
+					padding-bottom: 45px
+
+@media only screen and (max-width : 720px)
+	.advantage
+		padding: 0
+		margin-bottom: 10px
+		.section-title
+			margin-bottom: 36px
+		&-all
+			padding: 40px 15px 12px
+		&-col
+			padding-bottom: 35px
+		&-wrap
+			padding-left: 52px
+			p
+				font-size: 12px
+				line-height: 18px
+		&-ico
+			img,svg
+				max-width: 30px
+		&-name
+			font-size: 15px
+			line-height: 20px
+			margin-bottom: 5px
+
+@media only screen and (max-width : 600px)
+	.advantage
+		&-all
+			padding: 40px 10px 12px
+		&-col
+			width: 100%
+		&.advantage-second
+			.advantage
+				&-row
+					padding-bottom: 8px
+				&-col
+					width: 100%
+					padding-bottom: 35px
+				&-wrap
+					padding-left: 52px

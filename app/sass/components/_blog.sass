@@ -1,0 +1,92 @@
+@import "vars"
+
+.blog
+	padding: 0 15px
+	.wrapper
+		max-width: 100%
+	&-row
+		display: flex
+		flex-flow: row wrap
+		margin: 0 -7.5px
+	&-col
+		width: 50%
+		padding: 0 7.5px
+	&-wrap
+		display: block
+		padding-bottom: 50.1432664756447%
+		position: relative
+		background-repeat: no-repeat
+		background-position: center
+		background-size: cover
+		position: relative
+		&:hover
+			.blog
+				&-ico
+					img,svg
+						margin-top: -10px
+	&-block
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%,-50%)
+		display: block
+		width: 140px
+		height: 140px
+		padding: 0 10px 29px
+		background-color: rgba($colorAccent, 0.95)
+		text-align: center
+	&-ico
+		display: flex
+		align-items: center
+		justify-content: center
+		padding-top: 10px
+		min-height: 93px
+		height: 93px
+		img,svg
+			display: block
+			transition: $transition
+	&-name
+		display: block
+		font-size: 14px
+		line-height: 1.5
+		font-weight: normal
+		letter-spacing: 0.05em
+		text-transform: uppercase
+		color: #fff
+
+@media only screen and (max-width : 1040px)
+	.blog
+		&-block
+			width: 120px
+			height: 120px
+			padding: 0 5px 24px
+		&-ico
+			display: block
+			height: 78px
+			min-height: 78px
+			padding-top: 25px
+			img,svg
+				margin: 0 auto
+		&-name
+			font-size: 14px
+
+@media only screen and (max-width : 768px)
+	.blog
+		&.blog-second
+			display: none
+
+@media only screen and (max-width : 720px)
+	.blog
+		&-wrap
+			padding-bottom: 68%
+
+@media only screen and (max-width : 600px)
+	.blog
+		padding: 0 10px
+		&-col
+			width: 100%
+			padding-bottom: 10px
+			&:last-child
+				padding-bottom: 0
+		&-wrap
+			padding-bottom: 83.33333333333334%

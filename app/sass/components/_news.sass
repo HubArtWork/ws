@@ -1,0 +1,192 @@
+@import "vars"
+
+.news
+	padding: 170px 15px 100px
+	&-wrap,&-content
+		max-width: 698px
+		margin: 0 auto
+	&-wrap
+		.section-title
+			margin-bottom: 102px
+	&-item
+		padding-bottom: 52px
+	&-date
+		display: block
+		font-family: $Montserrat
+		font-size: 14px
+		line-height: 20px
+		color: #1B1464
+		margin: 0 0 15px
+	&-name
+		font-family: $Montserrat
+		font-size: 20px
+		line-height: 1.5
+		font-weight: normal
+		color: $colorAccent
+		a
+			color: $colorAccent
+	&-content
+		.section-title
+			font-size: 36px
+			line-height: 1.3
+			margin-bottom: 55px
+		.news-date
+			font-size: 14px
+			line-height: 20px
+		p
+			font-family: $Montserrat
+			font-size: 20px
+			line-height: 1.5
+			padding-bottom: 13px
+	&-slider
+		max-width: 600px
+		position: relative
+		margin: 39px 0 50px
+		.swiper-button-prev,.swiper-button-next
+			display: block
+			position: absolute
+			top: 50%
+			transform: translate(0,-50%)
+			width: 60px
+			height: 60px
+			background-color: $colorAccent
+			z-index: 40
+			margin: 0
+			&::after
+				display: none
+			.hb-ico
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%,-50%)
+		.swiper-button-prev
+			left: 0
+			&:hover
+				.hb-ico
+					left: 35%
+		.swiper-button-next
+			right: 0
+			&:hover
+				.hb-ico
+					left: 65%
+	&-slide
+		img,svg
+			display: block
+	&-share
+		display: flex
+		flex-flow: row nowrap
+		align-items: center
+		margin-top: 40px
+		padding: 21px 119px
+		background: #E2DDDB
+		font-family: $Montserrat
+		font-size: 14px
+		line-height: 18px
+		ul
+			display: flex
+			flex-flow: row nowrap
+			align-items: center
+			li
+				padding-left: 16px
+				color: $colorAccent
+				a
+					color: $colorAccent
+	&-tit
+		display: block
+		color: #1B1464
+	&.news-second
+		padding: 180px 15px 100px
+
+.pagination
+	display: flex
+	flex-flow: row wrap
+	margin: 0 -7.5px
+	li
+		padding: 0 7.5px
+		a
+			display: block
+			width: 60px
+			font-family: $Montserrat
+			font-size: 14px
+			line-height: 20px
+			color: $colorAccent
+			border: 1px solid $colorAccent
+			text-align: center
+			padding: 19px 4px
+		&.active
+			a
+				background-color: $colorAccent
+				color: #fff
+
+@media only screen and (max-width : 1040px)
+	.news
+		padding: 140px 0 60px
+		&-wrap
+			max-width: 590px
+			.section-title
+				margin-bottom: 42px
+		&-item
+			padding-bottom: 45px
+		&-content
+			max-width: 592px
+			.section-title
+				font-size: 30px
+				line-height: 1.4
+				margin-bottom: 33px
+			p
+				font-size: 15px
+				line-height: 25px
+		&-slider
+			max-width: 471px
+			margin: 27px 0 40px
+		&-share
+			padding: 21px 60px
+		&.news-second
+			padding: 150px 15px 60px
+	.pagination
+		padding-top: 20px
+
+@media only screen and (max-width : 768px)
+	.news
+		&-item
+			padding-bottom: 35px
+		&-date
+			margin-bottom: 5px
+		&-name
+			font-size: 14px
+			line-height: 20px
+		&-content
+			.news-date
+				margin-bottom: 12px
+	
+@media only screen and (max-width : 600px)
+	.news
+		padding: 110px 10px 20px
+		&-wrap
+			.section-title
+				margin-bottom: 35px
+		&-content
+			.section-title
+				font-size: 24px
+				line-height: 30px
+				margin-bottom: 24px
+			p
+				font-size: 12px
+				line-height: 18px
+		&-slider
+			margin: 12px 0 30px
+		&-share
+			margin-top: 23px
+			padding: 21px 10px 21px 10px
+		.swiper-button-prev,.swiper-button-next
+			width: 50px
+			height: 50px
+		&.news-second
+			padding: 110px 10px 30px
+	.pagination
+		padding-top: 10px
+		li
+			margin-bottom: 10px
+			a
+				width: 50px
+				padding: 14px 3px

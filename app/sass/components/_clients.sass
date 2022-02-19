@@ -1,0 +1,156 @@
+@import "vars"
+
+.clients
+	&-top
+		padding: 170px 15px 83px
+		.section-title
+			margin-bottom: 40px
+			b
+				display: block
+				font-weight: normal
+				color: $colorAccent
+	&-info
+		max-width: 934px
+		margin: 0 auto
+		p
+			font-family: $Montserrat
+			font-size: 20px
+			line-height: 1.5
+			padding-bottom: 15px
+			&:last-child
+				padding-bottom: 0
+	&-all
+		padding: 0 15px 15px
+	&-wrap
+		background: #E2DDDB
+		padding: 80px 60px 60px
+	&-row
+		display: flex
+		flex-flow: row nowrap
+		align-items: flex-start
+		justify-content: space-between
+		&.active
+			.clients
+				&-block
+					display: block
+				&-tit
+					&::after
+						content: '→'
+	&-tit
+		display: inline-block
+		font-family: $Montserrat
+		font-size: 20px
+		line-height: 1.5
+		font-weight: normal
+		color: $colorMain
+		position: relative
+		padding-right: 20px
+		&::after
+			content: '↓'
+			font-family: $Montserrat
+			font-size: 20px
+			line-height: 1.5
+			font-weight: normal
+			color: $colorMain
+			margin-left: 4px
+	&-block
+		max-width: 600px
+		width: 100%
+		padding-left: 22px
+		display: none
+		ul
+			margin-top: 9px
+			border-top: 1px solid rgba(27, 20, 100, 0.1)
+			li
+				border-bottom: 1px solid rgba(27, 20, 100, 0.1)
+				padding: 21px 30px 21px 0
+				font-family: $Montserrat
+				font-size: 14px
+				line-height: 24px
+				position: relative
+				img,svg
+					display: block
+					position: absolute
+					top: 50%
+					right: 0
+					transform: translate(0,-50%)
+	&-last
+		margin-top: -30px
+
+@media only screen and (max-width : 1040px)
+	.clients
+		&-top
+			padding: 130px 15px 54px
+			.section-title
+				margin-bottom: 10px
+			p
+				font-size: 14px
+				line-height: 20px
+				padding-bottom: 10px
+		&-wrap
+			padding: 50px 60px
+		&-tit
+			min-width: 102px
+			font-size: 14px
+			line-height: 20px
+			max-width: 102px
+			&::after
+				font-size: 14px
+				line-height: 20px
+		&-block
+			max-width: 100%
+			padding-left: 80px
+			ul
+				margin-top: 0
+				li
+					display: flex
+					align-items: center
+					min-height: 68px
+					line-height: 20px
+					padding: 13px 30px 13px 0
+		&-last
+			margin-top: -35px
+	
+@media only screen and (max-width : 720px)
+	.clients
+		&-all
+			padding: 0
+		&-wrap
+			background-color: transparent
+			padding: 0
+		&-row
+			display: block
+		&-tit
+			max-width: 100%
+			min-width: auto
+			width: 100%
+			padding: 0 15px
+			margin-bottom: 15px
+		&-block
+			padding: 0
+			background: #E2DDDB
+			margin-bottom: 50px
+			ul
+				padding: 0 15px
+				border: none
+				li
+					font-size: 12px
+					line-height: 18px
+					&:last-child
+						border: none
+		&-last
+			margin: 0
+		&-row.active .clients-tit::after
+			content: '↓'
+
+@media only screen and (max-width : 600px)
+	.clients
+		&-top
+			padding: 110px 10px 44px
+			.section-title
+				margin-bottom: 25px
+		&-tit
+			padding: 0 10px
+		&-block
+			ul
+				padding: 0 10px

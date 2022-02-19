@@ -1,0 +1,89 @@
+@import "vars"
+
+.posts
+	padding: 0 15px
+	.wrapper
+		max-width: 1410px
+		padding: 0
+	&-row
+		display: flex
+		flex-flow: row wrap
+		margin: 0 -7.5px
+
+.post
+	width: 25%
+	padding: 0 7.5px 15px
+	&-wrap
+		display: block
+		background-repeat: no-repeat
+		background-position: center
+		background-size: cover
+		padding-bottom: 100%
+		position: relative
+		&:hover
+			.post-info
+				padding-top: 20px
+				padding-bottom: 20px
+				min-height: 80px
+	&-info
+		display: flex
+		align-items: center
+		justify-content: center
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		background-color: rgba(#fff, 0.75)
+		padding: 10px 10px
+		text-align: center
+		z-index: 10
+		transition: $transition
+		text-align: center
+		min-height: 60px
+	&-name
+		display: block
+		font-size: 14px
+		line-height: 20px
+		letter-spacing: 0.05em
+		text-transform: uppercase
+		color: $colorMain
+
+@media only screen and (max-width : 1040px)
+	.post
+		&-wrap
+			&:hover
+				.post-info
+					padding: 10px 5px
+					min-height: 70px
+		&-info
+			padding: 10px 5px
+			min-height: 50px
+		&-name
+			font-size: 11px
+			line-height: 15px
+
+@media only screen and (max-width : 768px)
+	.post
+		&-wrap
+			&:hover
+				.post
+					&-info
+						min-height: 85px
+		&-info
+			min-height: 65px
+
+@media only screen and (max-width : 600px)
+	.posts
+		padding: 0 10px
+		&-row
+			margin: 0 -5px
+	.post
+		width: 50%
+		padding: 0 5px 10px
+		&-wrap
+			&:hover
+				.post-info
+					min-height: 70px
+		&-info
+			min-height: 50px
+			padding: 10px 5px

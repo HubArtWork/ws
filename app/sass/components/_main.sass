@@ -1,0 +1,94 @@
+@import "vars"
+
+.main
+	position: relative
+	padding: 0 15px
+	margin-bottom: 15px
+	&-mob
+		display: none
+		img,svg
+			display: block
+	.wrapper
+		display: flex
+		align-items: center
+		height: 760px
+	&-bg
+		position: absolute
+		top: 0
+		right: 0
+		width: 62.5%
+		height: 100%
+		z-index: 10
+		background-repeat: no-repeat
+		background-position: center left
+		background-size: cover
+	&-info
+		max-width: 594px
+		width: 100%
+		padding: 100px 0 50px
+		position: relative
+		z-index: 50
+		p
+			max-width: 577px
+			font-family: $Montserrat
+			font-size: 20px
+			line-height: 1.5
+			font-weight: normal
+			color: #1B1464
+			span
+				color: $colorAccent
+	.section-title
+		margin: 0 0 26px
+
+@media only screen and (max-width : 1040px)
+	.main
+		&-bg
+			width: 65.32%
+		.wrapper
+			height: auto
+			min-height: 500px
+		&-info
+			max-width: 592px
+			padding: 110px 0 49px
+			margin: 0 auto
+			.section-title
+				max-width: 376px
+				margin-bottom: 13px
+			p
+				max-width: 325px
+				font-size: 18px
+				line-height: 25px
+
+@media only screen and (max-width : 600px)
+	.main
+		padding: 0 0 45px
+		margin-bottom: 0
+		.wrapper
+			display: block
+			min-height: auto
+			padding: 0 15px
+		&-bg
+			display: none
+		&-mob
+			display: block
+			margin-bottom: 40px
+			img,svg
+				display: block
+		&-info
+			padding: 0
+			max-width: 100%
+			.section-title
+				margin-bottom: 16px
+			p
+				font-size: 15px
+				line-height: 20px
+		&.main-second
+			background: #E2DDDB
+
+@media only screen and (max-width : 450px)
+	.main
+		&.main-second
+			background: #E2DDDB
+			.main-info
+				max-width: 230px
+				margin: 0 auto

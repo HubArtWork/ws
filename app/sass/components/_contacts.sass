@@ -1,0 +1,62 @@
+@import "vars"
+
+.contacts
+	padding: 170px 15px 100px
+	&-wrap
+		max-width: 698px
+		margin: 0 auto
+	.section-title
+		margin-bottom: 117px
+	&-bottom
+		padding-top: 45px
+		&-wrap
+			padding-left: 238px
+			position: relative
+		.checkbox
+			position: absolute
+			top: 0
+			left: 0
+			max-width: 182px
+			width: 100%
+			min-width: 182px
+		.primary-btn
+			display: block
+			width: 100%
+
+@media only screen and (max-width : 1300px)
+	.contacts
+		padding: 140px 0 80px
+		.section-title
+			margin-bottom: 53px
+
+@media only screen and (max-width : 720px)
+	.contacts
+		padding: 110px 15px 30px
+		.section-title
+			margin-bottom: 45px
+	.input
+		&-block
+			display: block
+			margin-bottom: 0
+			input,select
+				height: 50px
+				padding: 0 10px
+			textarea
+				padding: 10px
+		&-label
+			line-height: 40px
+			min-width: auto
+			width: 100%
+			padding: 0
+	
+@media only screen and (max-width : 600px)
+	.contacts
+		padding-left: 10px
+		padding-right: 10px
+		&-bottom
+			padding-top: 20px
+			&-wrap
+				padding-left: 0
+			.checkbox
+				position: relative
+				margin-bottom: 20px

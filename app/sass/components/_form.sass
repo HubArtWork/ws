@@ -1,0 +1,78 @@
+@import "vars"
+
+.form
+	padding: 0 15px 15px
+	&-all
+		background-color: $colorMain
+		padding: 120px 60px
+		.section-title
+			color: #fff
+			margin: 0
+	&-row
+		display: flex
+		flex-flow: row nowrap
+		margin: 0 -8px
+	&-info,&-block
+		width: 50%
+		padding: 0 8px
+	&-info
+		.section-title
+			max-width: 355px
+			margin: 0
+	.input-block
+		margin-bottom: 15px
+		.input-label
+			color: #fff
+		input,textarea
+			background-color: transparent
+			border-color: #fff
+			color: #fff
+	.contacts-bottom
+		padding-top: 0
+	&.form-second
+		padding-bottom: 0
+		.section-title
+			max-width: 530px
+
+@media only screen and (max-width : 1040px)
+	.form
+		&-all
+			padding: 50px 60px 60px
+			.section-title
+				max-width: 100%
+				margin-bottom: 52px
+		&-row
+			display: block
+		&-info,&-block
+			width: 100%
+		&.form-second
+			.section-title
+				max-width: 100%
+
+@media only screen and (max-width : 768px)
+	.form
+		padding-bottom: 0
+
+@media only screen and (max-width : 720px)
+	.form
+		padding: 0
+		&-all
+			padding: 50px 15px 60px
+			.section-title
+				margin-bottom: 45px
+		.input
+			&-block
+				display: block
+				margin-bottom: 10px
+				input,select
+					height: 60px
+					padding: 0 10px
+				textarea
+					padding: 10px
+	
+@media only screen and (max-width : 600px)
+	.form
+		.contacts-bottom .checkbox
+			margin-bottom: 10px
+		&-all
+			padding: 50px 10px 60px

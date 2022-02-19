@@ -1,0 +1,175 @@
+@import "vars"
+
+.header
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	background-color: $colorMain
+	z-index: 1000
+	&-logo
+		position: absolute
+		top: 15px
+		left: 50%
+		transform: translate(-50%,0)
+		img,svg
+			display: block
+	.wrapper
+		max-width: 1440px
+		padding: 0 15px
+	&-wrap,&-list
+		display: flex
+		flex-flow: row nowrap
+		align-items: center
+	&-wrap
+		justify-content: space-between
+	&-list
+		li
+			position: relative
+			&::before,&::after
+				content: ''
+				position: absolute
+				top: 50%
+				left: -1px
+				width: 1px
+				height: 12px
+				transform: translate(0,-50%)
+				background-color: $colorAccent
+			&::before
+				display: none
+				left: auto
+				right: 0
+			&:last-child
+				&::before
+					display: block
+			a
+				display: inline-block
+				padding: 20px 15px
+				font-size: 14px
+				line-height: 20px
+				letter-spacing: 0.05em
+				text-transform: uppercase
+				color: #fff
+				&:hover
+					padding: 14px 15px 26px
+			&.active
+				a
+					background-color: $colorAccent
+				&::before,&::after
+					display: none
+	&-bar span,&-bar span:before,&-bar span:after
+		display: block
+		height: 1px
+		width: 42px
+		position: absolute
+		top: 50%
+		margin-top: -0.5px
+		left: 50%
+		margin-left: -21px
+		background: #fff
+	&-bar
+		position: absolute
+		top: 50%
+		right: 15px
+		transform: translate(0,-50%)
+		width: 42px
+		height: 40px
+		z-index: 1000
+		cursor: pointer
+		display: none
+		span
+			background-color: $colorMain
+			&:after
+				content: ''
+				transition: $transition
+				margin-top: 3px
+			&:before
+				content: ''
+				transition: $transition
+				margin-top: -5px
+	&.header-active
+		.header
+			&-bar
+				span
+					background: transparent
+					&:after
+						transform: rotate(-135deg)
+						margin-top: 0
+					&:before
+						transform: rotate(135deg)
+						margin-top: 0
+
+@media only screen and (max-width : 1040px)
+	.header
+		&-logo
+			top: 15px
+			left: 15px
+			transform: none
+			img,svg
+				max-width: 200px
+		&-wrap
+			justify-content: flex-end
+		&-list
+			li
+				&::before,&::after
+					top: 15px
+					transform: none
+				a
+					padding: 11px 9px 29px
+					&:hover
+						padding: 6px 9px 34px
+			&:last-child
+				&::after
+					display: none
+
+@media only screen and (max-width : 720px)
+	.header
+		height: 40px
+		&-logo
+			top: 10px
+			left: 15px
+			z-index: 1001
+		&-bar
+			display: block
+		&-wrap
+			display: block
+			position: fixed
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			max-height: 100%
+			overflow-x: hidden
+			overflow-y: auto
+			background-color: $colorMain
+			text-align: center
+			padding: 92px 0 10px
+			opacity: 0
+			visibility: hidden
+			transition: opacity $transition, visibility $transition
+		&-list
+			display: block
+			padding: 0
+			&::after
+				display: none
+			li
+				padding: 5px 0
+				&::after
+					display: none
+				a
+					display: block
+					padding: 13px
+					&:hover
+						padding: 13px
+		&.header-active
+			.header
+				&-wrap
+					opacity: 1
+					visibility: visible
+	
+@media only screen and (max-width : 600px)
+	.header
+		&-logo
+			left: 10px
+		&-bar
+			right: 10px
